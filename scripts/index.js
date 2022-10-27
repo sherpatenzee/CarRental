@@ -32,7 +32,7 @@ function totalCost() {
     extraPerDay += 2.95;
   }
   let opt = document.getElementById("opt");
-  opt.innerHTML = "Options: $ " + extraPerDay.toFixed(2);
+  opt.innerHTML = "Options: $ " + (days * extraPerDay.toFixed(2));
 
 
 //radio
@@ -53,7 +53,7 @@ function totalCost() {
 
 //total
   let tot = document.getElementById("total");
-  let cal = total + surCharge + extraPerDay;
+  let cal = total + surCharge + (days * extraPerDay);
   tot.innerHTML = "Total due: $ " + cal.toFixed(2);
 
 //return function
